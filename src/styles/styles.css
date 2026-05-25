@@ -32,7 +32,7 @@ button {
   min-height: 0;
   display: flex;
   align-items: center;
-  padding: 22px 16px 12px;
+  padding: 18px 16px 10px;
   background: #fff8ef;
 }
 
@@ -42,10 +42,17 @@ button {
   margin: 0 auto;
 }
 
+.header-content {
+  display: grid;
+  gap: 14px;
+}
+
 .eyebrow,
 .meal-type,
 .summary-card span,
-.day-picker span {
+.day-picker span,
+.field span,
+.ingredient-card-header span {
   margin: 0;
   color: #a84822;
   font-size: 0.76rem;
@@ -80,6 +87,36 @@ h1 {
   line-height: 1.45;
 }
 
+.site-nav,
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-nav button,
+.category-tabs button,
+.secondary-button {
+  min-height: 40px;
+  border: 1px solid #d8c5ae;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: #fffaf2;
+  color: #2f2a24;
+  font-weight: 800;
+}
+
+.site-nav button.active,
+.category-tabs button.active {
+  border-color: #2d8b78;
+  background: #2d8b78;
+  color: #fff;
+}
+
+.secondary-button {
+  background: #fff;
+}
+
 .page-shell {
   padding: 12px 16px 48px;
 }
@@ -95,7 +132,8 @@ h1 {
 .filter-bar,
 .day-section,
 .meal-card,
-.meal-modal {
+.meal-modal,
+.ingredient-card {
   border: 1px solid rgba(116, 71, 34, 0.13);
   box-shadow: 0 18px 50px rgba(73, 49, 25, 0.12);
 }
@@ -212,7 +250,11 @@ h1 {
 .meal-card:focus-visible,
 .close-button:focus-visible,
 .button-group button:focus-visible,
-.day-picker select:focus-visible {
+.day-picker select:focus-visible,
+.site-nav button:focus-visible,
+.category-tabs button:focus-visible,
+.secondary-button:focus-visible,
+.field input:focus-visible {
   outline: 3px solid #2d8b78;
   outline-offset: 2px;
 }
@@ -350,9 +392,79 @@ h1 {
   line-height: 1.55;
 }
 
+.ingredients-page {
+  display: grid;
+  gap: 16px;
+}
+
+.ingredients-heading {
+  display: grid;
+  gap: 12px;
+  align-items: start;
+}
+
+.ingredients-heading h2 {
+  margin-bottom: 6px;
+  font-size: 1.8rem;
+}
+
+.ingredients-heading p {
+  max-width: 680px;
+  margin-bottom: 0;
+  color: #71685f;
+  line-height: 1.5;
+}
+
+.ingredients-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.ingredient-card {
+  display: grid;
+  gap: 14px;
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(255, 253, 248, 0.96);
+}
+
+.ingredient-card-header h3 {
+  margin: 4px 0 0;
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #d8c5ae;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: #fffaf2;
+  color: #2f2a24;
+  font: inherit;
+  font-weight: 700;
+}
+
+.macro-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
 @media (min-width: 720px) {
   .site-header {
-    padding: 28px 24px 14px;
+    padding: 22px 24px 12px;
+  }
+
+  .header-content {
+    grid-template-columns: 1fr auto;
+    align-items: center;
   }
 
   .page-shell {
@@ -372,6 +484,14 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .ingredients-heading {
+    grid-template-columns: 1fr auto;
+  }
+
+  .ingredients-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .meal-card {
     grid-template-columns: 140px 1fr;
   }
@@ -382,7 +502,8 @@ h1 {
 }
 
 @media (min-width: 1080px) {
-  .week-overview {
+  .week-overview,
+  .ingredients-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

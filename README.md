@@ -1,6 +1,6 @@
 # Weekly Meal Plan
 
-Weekly Meal Plan is a mobile-friendly static website for a 7-day meal plan for two people. It shows breakfast, lunch, dinner, and snacks for each day, with meal photos, calories, macros, meal-prep labels, and tap-to-open meal details.
+Weekly Meal Plan is a mobile-friendly static website for a 7-day meal plan for two people. It shows breakfast, lunch, dinner, and snacks for each day, with meal photos, calories, macros, meal-prep labels, and tap-to-open meal details. It also includes an editable ingredients page for tracking kitchen inventory.
 
 This is a simple React + Vite website. It does not use a backend, database, login system, API, secrets, environment variables, or private user information.
 
@@ -64,6 +64,16 @@ To remove the label, set:
 ```js
 mealPrep: false
 ```
+
+## Edit the ingredients list
+
+The starter ingredients are stored in:
+
+```text
+src/data/ingredients.js
+```
+
+The Ingredients page lets you edit quantities and macro estimates in the browser. Those changes are saved locally on that device using browser storage. Because this is a static site, edits made on one person's phone or computer do not automatically sync to another person's device.
 
 ## Safety note
 

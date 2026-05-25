@@ -1,0 +1,55 @@
+export const ingredientCategories = [
+  {
+    name: 'Freezer',
+    items: [
+      { name: 'Frozen ribeye steak', quantity: '2 steaks', calories: 300, protein: 24, carbs: 0, fat: 22 },
+      { name: 'Skirt steak', quantity: '2 lb', calories: 240, protein: 28, carbs: 0, fat: 14 },
+      { name: 'Chicken breast', quantity: '4 pieces', calories: 165, protein: 31, carbs: 0, fat: 4 },
+      { name: 'Chicken wings', quantity: '3 lb', calories: 290, protein: 27, carbs: 0, fat: 19 },
+      { name: 'Beef meatballs', quantity: '1 bag', calories: 250, protein: 16, carbs: 8, fat: 18 },
+      { name: 'Frozen salmon', quantity: '4 fillets', calories: 230, protein: 25, carbs: 0, fat: 14 },
+      { name: 'Sea bass', quantity: '2 fillets', calories: 125, protein: 24, carbs: 0, fat: 3 },
+      { name: 'Shrimp', quantity: '1 bag', calories: 120, protein: 24, carbs: 1, fat: 2 },
+      { name: 'Frozen beef patties', quantity: '4 patties', calories: 330, protein: 22, carbs: 0, fat: 27 },
+      { name: 'Frozen broccoli', quantity: '2 bags', calories: 50, protein: 4, carbs: 10, fat: 1 },
+      { name: 'Corn', quantity: '1 bag', calories: 90, protein: 3, carbs: 19, fat: 1 },
+      { name: 'Green peas', quantity: '1 bag', calories: 80, protein: 5, carbs: 14, fat: 0 },
+      { name: 'Mixed veggies', quantity: '2 bags', calories: 70, protein: 3, carbs: 13, fat: 1 },
+      { name: 'Mixed fruits', quantity: '1 bag', calories: 80, protein: 1, carbs: 20, fat: 0 },
+    ],
+  },
+  {
+    name: 'Fridge',
+    items: [
+      { name: 'Eggs', quantity: '1 dozen', calories: 70, protein: 6, carbs: 1, fat: 5 },
+      { name: 'Romaine lettuce', quantity: '2 heads', calories: 10, protein: 1, carbs: 2, fat: 0 },
+      { name: 'Mushrooms', quantity: '1 box', calories: 20, protein: 3, carbs: 3, fat: 0 },
+      { name: 'Pasta sauce', quantity: '1 jar open', calories: 70, protein: 2, carbs: 11, fat: 2 },
+    ],
+  },
+  {
+    name: 'Fresh',
+    items: [
+      { name: 'Tomatoes', quantity: '6 tomatoes', calories: 25, protein: 1, carbs: 5, fat: 0 },
+      { name: 'Zucchini', quantity: '3 zucchini', calories: 35, protein: 2, carbs: 7, fat: 1 },
+      { name: 'Bell peppers', quantity: '4 peppers', calories: 30, protein: 1, carbs: 7, fat: 0 },
+      { name: 'Bananas', quantity: '6 bananas', calories: 105, protein: 1, carbs: 27, fat: 0 },
+    ],
+  },
+  {
+    name: 'Pantry',
+    items: [
+      { name: 'Flour tortillas', quantity: '1 pack', calories: 140, protein: 4, carbs: 24, fat: 4 },
+      { name: 'Corn tortillas', quantity: '1 pack', calories: 60, protein: 1, carbs: 12, fat: 1 },
+      { name: 'Refried beans', quantity: '2 cans', calories: 120, protein: 6, carbs: 18, fat: 3 },
+      { name: 'White beans', quantity: '2 cans', calories: 110, protein: 7, carbs: 20, fat: 1 },
+      { name: 'Black beans', quantity: '2 cans', calories: 110, protein: 7, carbs: 20, fat: 1 },
+      { name: 'Pinto beans', quantity: '2 cans', calories: 120, protein: 7, carbs: 22, fat: 1 },
+      { name: 'Chickpeas', quantity: '2 cans', calories: 135, protein: 7, carbs: 22, fat: 2 },
+      { name: 'Quinoa', quantity: '1 bag', calories: 220, protein: 8, carbs: 39, fat: 4 },
+      { name: 'Protein pasta', quantity: '1 box', calories: 190, protein: 10, carbs: 38, fat: 1 },
+      { name: 'Mixed nuts', quantity: '1 container', calories: 170, protein: 6, carbs: 6, fat: 15 },
+      { name: 'Canned chili', quantity: '2 cans', calories: 250, protein: 17, carbs: 30, fat: 8 },
+    ],
+  },
+];

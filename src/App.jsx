@@ -5,10 +5,12 @@ import SummaryStats from './components/SummaryStats.jsx';
 import FilterBar from './components/FilterBar.jsx';
 import WeekOverview from './components/WeekOverview.jsx';
 import MealDetailsModal from './components/MealDetailsModal.jsx';
+import IngredientsPage from './components/IngredientsPage.jsx';
 
 const ALL_DAYS = 'All days';
 
 function App() {
+  const [currentPage, setCurrentPage] = React.useState('meal-plan');
   const [showMealPrepOnly, setShowMealPrepOnly] = React.useState(false);
   const [selectedDay, setSelectedDay] = React.useState(ALL_DAYS);
   const [selectedMeal, setSelectedMeal] = React.useState(null);
@@ -26,18 +28,24 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header currentPage={currentPage} onPageChange={setCurrentPage} />
       <main className="page-shell">
-        <SummaryStats plan={mealPlan} people={2} />
-        <FilterBar
-          dayNames={dayNames}
-          selectedDay={selectedDay}
-          allDaysLabel={ALL_DAYS}
-          showMealPrepOnly={showMealPrepOnly}
-          onDayChange={setSelectedDay}
-          onMealPrepToggle={setShowMealPrepOnly}
-        />
-        <WeekOverview plan={visiblePlan} onMealSelect={setSelectedMeal} />
+        {currentPage === 'meal-plan' ? (
+          <>
+            <SummaryStats plan={mealPlan} people={2} />
+            <FilterBar
+              dayNames={dayNames}
+              selectedDay={selectedDay}
+              allDaysLabel={ALL_DAYS}
+              showMealPrepOnly={showMealPrepOnly}
+              onDayChange={setSelectedDay}
+              onMealPrepToggle={setShowMealPrepOnly}
+            />
+            <WeekOverview plan={visiblePlan} onMealSelect={setSelectedMeal} />
+          </>
+        ) : (
+          <IngredientsPage />
+        )}
       </main>
       <MealDetailsModal meal={selectedMeal} onClose={() => setSelectedMeal(null)} />
     </>
